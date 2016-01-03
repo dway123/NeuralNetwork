@@ -8,7 +8,7 @@ A Neural Network trainer and tester. There are three layers input, hidden, and o
 
 Explanation of Inputs and Outputs
 =================================
--Formats for inputoutput neural networks
+-Formats for input/output neural networks
 	-First line has 3 integers separated by spaces, specifying number of input neurons (ni), number of hidden neurons (nh), and number of output neurons (no).
 	-The next nh lines (representing nh hidden nodes) contain ni+1 values each, each of them double-precision floating point weights originating from the input layer and ending in the hidden layer. For each line, the first number is the zeroth weight, the bias weight for an input node. The rest are weights going from all inputs to each hidden node. Therefore, there are ni weights plus one bias, for ni+1 weights per hidden node.
 	-The next no lines (representing no output nodes) contain nh+1 values each, each of them double-precision floating point weights originating from the hidden layer and ending in theo output layer. These no lines contain the same format as the previous nh lines, but instead of going from input to hidden layer, the nodes go from hidden to output layer.
@@ -27,7 +27,7 @@ Explanation of Inputs and Outputs
 		
 		-Note All double precision values rounded to three decimal places.
 
-User InterfaceInstructions
+User Interface and Instructions
 ===========================
 When running the training program, the user will first be asked to provide an input neural network. Verification of this program involved an input neural network generated through use of a random number generator, but any file of a correct format works. The user will also be prompted for a training file to train the input neural network on, and an output file name to output the trained neural network to. The user will also be prompted for the number of epochs (number of iterations through the training set) ...(line truncated)...
 
