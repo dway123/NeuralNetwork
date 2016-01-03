@@ -1,0 +1,31 @@
+Neural Network Project
+======================
+The neural network project can be run in Cygwin by using the following commands from the
+Makefile, “make train.exe” and “make test.exe”, and then running test.exe and train.exe.
+
+The dataset attached, named the “Pima Indians Diabetes Data Set”, is from the UCI Machine
+Learning Repository (http://archive.ics.uci.edu/ml/datasets/Pima+Indians+Diabetes), and concerns
+determination of whether a patient, given several parameters, exhibits signs of diabetes. It was created by
+the National Institute of Diabetes and Digestive and Kidney Diseases, and donated to the database by
+Johns Hopkins University on May 9, 1990. All patients in the database are females above 21 years old of
+Pima Indian heritage. There are 8 inputs in the dataset: (a) number of times pregnant, (b) plasma glucose
+concentration at 2 hours (in an oral glucose tolerance test), (c) Diastolic blood pressure (pressure in
+arteries when the heart rests between beats), (d) triceps skinfold thickness (in mm), (e) serum insulin (mm
+U/mL after 2 hours), (f) body mass index (weight in kg/(height in m)^2), (g) diabetes pedigree function,
+and (h) age. The one output is whether or not the patient exhibits signs of diabetes.
+
+The original data set has been modified to support the current neural network implementation.
+The delimiter was changed from commas to spaces, and all values were normalized to their largest value.
+Additionally, the data set was originally one file; it was split up into two files, one for training and one for
+testing. The data set also contained many zero values that were determined to be not physically possible
+(like plasma glucose concentration and blood pressure). Many patients were culled from the data set if
+they had too many zero values, but many were kept out of curiosity of whether the neural network could
+account for the zero values (it could, but would be less effective). Additionally, the initial neural network
+was generated using a random number generator.
+
+The optimal implementation (maximizing F1) of the neural network, after testing, seems to be a
+learning rate of .15, 1000 epochs, and 5 hidden nodes. The attached table below contains results for other
+implementations and their number of hidden nodes, epochs, learning rate, and F1 values. Other values or
+tests either correlated or were deemed less important, and were therefore left out. The neural network, in
+the optimal configuration, was able to achieve an accuracy of 86.5%, a precision of 83.3%, a recall of
+71.4%, and an F1 Value of 76.9%.
