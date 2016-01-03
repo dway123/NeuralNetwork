@@ -1,13 +1,8 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
-
 using namespace std;
-
 #include "nn.h"
-
-//metrics
-
 
 int main(){
 	cout << "Welcome to the Neural Network testing program." << endl;
