@@ -20,18 +20,22 @@ double nn::sigp(double x){
 	return sig(x)*(1-sig(x));
 }
 
+//ACCURACY: returns accuracy
 double nn::accuracy(int a, int b, int c, int d){
 	return (((double)a+d)/(a+b+c+d));
 }
 
+//PRECISION: returns precision
 double nn::precision(int a, int b){
 	return ((double)a/(a+b));
 }
 
+//RECALL: returns recall
 double nn::recall(int a, int c){
 	return ((double)a/(a+c));
 }
 
+//F1: returns F1
 double nn::F1(int a, int b, int c, int d){
 	return ((2*(double)precision(a,b)*recall(a,c))/(precision(a,b)+recall(a,c)));
 }
