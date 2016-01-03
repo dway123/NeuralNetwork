@@ -30,8 +30,26 @@ When running the training program, the user will first be asked to provide an in
 
 When running the testing program, the user will be asked for an input file (preferably the output of the training file), a testing file, and an output file for outputting metrics.
 
-Recommended Uses
-=================
+Primary use
+===========
+In order to use the files contained in this repository, and test their usability, the following actions are recommended:
+- download the .zip file and open in an environment of your choice.
+- run the following commands in a shell of your choice: "make train.exe", "make test.exe", "./train.exe", and "./test.exe"
+- for the training program, the arguments will be as follows:
+	- PIDuntrainedNN.txt
+	- pima-indians-diabetes-train.txt
+	- 1000
+	- .15
+	- PIDtrainedNN.txt
+- For the testing program, the arguments will be as follows:
+	- PIDtrainedNN.txt
+	- pima-indians-diabetes-test.txt
+	- pima-indians-diabetes-results.txt
+-Hopefully, after such commands, the results will be the same as the original ones. Feel free to mess around with/reverse engineer whatever you want. 
+
+
+Other Recommended Uses
+=======================
 
 If one wishes to use this neural network to analyze performance of the neural network, it is recommended to find a relatively large dataset, and split it into two parts. The larger training file should contain the majority of the data, whereas the smaller testing file should have a smaller portion. Inputs should be normalized to their largest value (divide by the largest number in the dataset) so that they are of values between zero and one, and the file should be adjusted to match the aforementioned format. A initial neural network may be created by randomly generating as many numbers as there are weights, and adjusting to match the aforementioned format.
 
