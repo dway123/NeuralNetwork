@@ -8,7 +8,7 @@ using namespace std;
 class nn{
 public:
 	
-	nn(); //constructor does... nothing?
+	nn(); //empty constructor
 	
 	bool read(); //reads the neural network from a file
 	bool write(); //writes the neural network to a file
@@ -37,12 +37,5 @@ private:
 	//store the training examples
 	vector<vector<double> > exIn; //stores an example's inputs
 	vector<vector<double> > exOut; //stores an example's outputs
-	
-	//double a[ni]; //input vector
-	//double w[ni+1][nh]; //hidden node weight vector
-	//double bw[nh+1][no]; //weights for output nodes
-	//double b[no]; //output vector
-	//double b[no]; //output vector
-	//double b[no]; //output vector
 };
 #endif //_NN_H
